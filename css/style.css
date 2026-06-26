@@ -1,0 +1,896 @@
+/* ===================================================
+   HAPPY BIRTHDAY WEBSITE
+   CSS PART 1
+=================================================== */
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#ffd6ec,#d9f3ff);
+
+    overflow-x:hidden;
+
+    color:#444;
+
+}
+
+/* LOADING */
+
+#loading{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:99999;
+
+}
+
+.heartLoader{
+
+    font-size:80px;
+
+    animation:heartBeat 1s infinite;
+
+}
+
+#loading h2{
+
+    margin-top:20px;
+
+    color:#ff4f87;
+
+    font-size:32px;
+
+    font-family:'Pacifico',cursive;
+
+}
+
+@keyframes heartBeat{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.3);}
+100%{transform:scale(1);}
+
+}
+
+
+/* WEBSITE */
+
+.hidden{
+
+display:none;
+
+}
+
+
+/* PAGE */
+
+.page{
+
+display:none;
+
+min-height:100vh;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+animation:fade .8s;
+
+}
+
+.page.active{
+
+display:flex;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* GLASS CARD */
+
+.glass{
+
+width:90%;
+
+max-width:900px;
+
+background:rgba(255,255,255,.25);
+
+backdrop-filter:blur(15px);
+
+padding:50px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:0 20px 50px rgba(0,0,0,.18);
+
+border:1px solid rgba(255,255,255,.35);
+
+}
+
+
+/* TITLES */
+
+h1{
+
+font-size:48px;
+
+color:#ff4f87;
+
+margin-bottom:25px;
+
+font-family:'Pacifico',cursive;
+
+}
+
+h2{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+color:#444;
+
+}
+
+p{
+
+font-size:22px;
+
+line-height:1.8;
+
+margin-top:15px;
+
+}
+
+
+/* BUTTONS */
+
+.buttons{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+button{
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:20px;
+
+font-weight:600;
+
+transition:.35s;
+
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+button:hover{
+
+transform:translateY(-5px);
+
+}
+
+#yesBtn{
+
+background:#ff4f87;
+
+color:white;
+
+}
+
+#noBtn{
+
+background:white;
+
+color:#444;
+
+}
+
+.next{
+
+background:#63c8ff;
+
+color:white;
+
+margin-top:35px;
+
+}
+
+
+/* MEMORY IMAGE */
+
+.memory{
+
+width:90%;
+
+max-width:650px;
+
+border-radius:25px;
+
+margin:30px auto;
+
+display:block;
+
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+transition:.5s;
+
+}
+
+.memory:hover{
+
+transform:scale(1.05);
+
+}
+
+
+/* TYPING BOX */
+
+#typingBox{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#ff4f87;
+
+margin:35px auto;
+
+min-height:120px;
+
+line-height:1.8;
+
+}
+
+
+/* IMAGE BOX */
+
+#dateImageBox{
+
+display:none;
+
+margin-top:30px;
+
+}
+
+
+/* QUIZ */
+
+.options{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+margin-top:25px;
+
+}
+
+.options button{
+
+background:#ffffff;
+
+}
+
+.result{
+
+margin-top:25px;
+
+font-size:24px;
+
+font-weight:bold;
+
+color:#ff4f87;
+
+min-height:60px;
+
+}
+
+
+/* INPUT */
+
+input{
+
+width:300px;
+
+max-width:90%;
+
+padding:15px;
+
+font-size:20px;
+
+border-radius:12px;
+
+border:none;
+
+outline:none;
+
+margin-top:20px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+
+/* LETTER */
+
+.letterCard{
+
+line-height:2;
+
+}
+
+#loveLetter{
+
+font-size:24px;
+
+}
+
+
+/* FINAL */
+
+.finalGlass h1{
+
+font-size:60px;
+
+}
+
+.finalGlass p{
+
+font-size:24px;
+
+margin-top:30px;
+
+}
+
+
+/* CRY MESSAGE */
+
+#cryMessage{
+
+margin-top:30px;
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#ff4f87;
+
+min-height:70px;
+
+}
+
+/* ===================================================
+   CSS PART 2
+   ANIMATIONS & EFFECTS
+=================================================== */
+
+/* Floating Hearts */
+
+#floatingHearts{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:1;
+
+}
+
+.heart{
+
+position:absolute;
+
+bottom:-60px;
+
+animation:heartFloat linear forwards;
+
+opacity:.9;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+
+
+/* Background Glow */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+left:-250px;
+
+top:-250px;
+
+width:650px;
+
+height:650px;
+
+background:#ffc9df;
+
+filter:blur(150px);
+
+opacity:.5;
+
+z-index:-2;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+right:-250px;
+
+bottom:-250px;
+
+width:650px;
+
+height:650px;
+
+background:#c8f1ff;
+
+filter:blur(150px);
+
+opacity:.5;
+
+z-index:-2;
+
+}
+
+
+
+/* Glass Hover */
+
+.glass{
+
+transition:.4s;
+
+}
+
+.glass:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 25px 60px rgba(0,0,0,.2);
+
+}
+
+
+
+/* Buttons */
+
+button{
+
+transition:.35s;
+
+}
+
+button:hover{
+
+transform:translateY(-5px) scale(1.05);
+
+}
+
+button:active{
+
+transform:scale(.95);
+
+}
+
+
+
+/* Memory */
+
+.memory{
+
+cursor:pointer;
+
+}
+
+.memory:hover{
+
+transform:scale(1.05) rotate(-1deg);
+
+}
+
+
+
+/* Birthday */
+
+.birthday{
+
+animation:glowText 2s infinite alternate;
+
+}
+
+@keyframes glowText{
+
+from{
+
+text-shadow:0 0 10px #ff8bb5;
+
+}
+
+to{
+
+text-shadow:0 0 30px #ff4f87;
+
+}
+
+}
+
+
+
+/* Typing */
+
+#typingBox{
+
+min-height:140px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+
+
+/* Letter */
+
+#loveLetter{
+
+animation:letterGlow 2s infinite alternate;
+
+}
+
+@keyframes letterGlow{
+
+from{
+
+text-shadow:0 0 8px pink;
+
+}
+
+to{
+
+text-shadow:0 0 18px hotpink;
+
+}
+
+}
+
+
+
+/* Stars */
+
+#stars{
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+
+
+/* Final Hearts */
+
+#finalHearts{
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+}
+
+
+
+/* Confetti */
+
+#confetti{
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+}
+
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:white;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff79ab;
+
+border-radius:20px;
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.glass{
+
+padding:30px;
+
+width:95%;
+
+}
+
+h1{
+
+font-size:34px;
+
+}
+
+h2{
+
+font-size:24px;
+
+}
+
+p{
+
+font-size:18px;
+
+}
+
+button{
+
+width:100%;
+
+max-width:280px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.options{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.memory{
+
+width:100%;
+
+}
+
+input{
+
+width:100%;
+
+}
+
+#loveLetter{
+
+font-size:18px;
+
+}
+
+}
+
+
+
+/* Cute Fade */
+
+.fadeIn{
+
+animation:fadeIn .7s;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/* Heart Beat */
+
+.mainHeart{
+
+animation:heartBeatBig 1.2s infinite;
+
+}
+
+@keyframes heartBeatBig{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
