@@ -783,3 +783,27 @@ launchConfetti();
 // ==============================
 
 console.log("❤️ Website Loaded Successfully ❤️");
+
+// =============================
+// SECRET CODE
+// =============================
+
+const SECRET = "santy@96";   // Change this to any code you want
+
+const unlockBtn = document.getElementById("unlockWebsite");
+
+unlockBtn.addEventListener("click",()=>{
+
+const entered = document.getElementById("secretCode").value;
+
+if(entered === SECRET){
+
+document.getElementById("secretScreen").style.display="none";
+
+}else{
+
+document.getElementById("secretMessage").innerHTML="❌ Wrong Secret Code ❤️";
+
+}
+
+});
