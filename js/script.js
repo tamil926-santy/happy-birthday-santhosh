@@ -166,7 +166,7 @@ const typingBox = document.getElementById("typingBox");
 
 const kissMessage =
 
-`I Gifted it for you last birthday 😚...
+`We Made it on your last birthday 😚...
 
 Close your eyes for a while
 
