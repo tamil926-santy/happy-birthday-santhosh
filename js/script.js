@@ -164,9 +164,7 @@ function createFloatingHearts(){
 
 const typingBox = document.getElementById("typingBox");
 
-const kissMessage =
-
-`We Made it on your last birthday 😚...
+const kissMessage =`We Made it on your last birthday 😚...
 
 Close your eyes for a while
 
